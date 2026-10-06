@@ -110,6 +110,7 @@
     .entry, .tl-item{ grid-template-columns:1fr; gap:10px; }
     .entry-media{ width:100%; aspect-ratio:16/9; }
     .entry-media.short{ width:min(320px, 100%); aspect-ratio:720/734; }
+    .entry-media.short[style]{ width:min(280px, 100%); }
     nav ul{ gap:12px; font-size:13px; }
   }
   :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
@@ -204,6 +205,18 @@
         <div class="entry-desc">Simulated the dynamic performance of a closed-loop variable-speed drive for a 20 HP, 250 V, 600 rpm, 8-pole separately excited DC motor under a fan-type load.</div>
         <div class="entry-tags">Power Electronics · Drive Simulation</div>
         <div class="entry-links"><a href="dc-motor-startup.png" target="_blank" rel="noopener">Startup Plots</a></div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-media short" style="aspect-ratio:688/848"><video src="pcb.mp4" autoplay muted loop playsinline preload="auto" aria-label="Soldered IR object-detection board: the red indicator LED turns on as a finger approaches the IR sensor"></video></div>
+      <div>
+        <div class="entry-year">2025</div>
+        <div class="entry-title">IR Proximity Object-Detection PCB</div>
+        <div class="entry-sub">Course project</div>
+        <div class="entry-desc">Designed the schematic and a 60 × 55 mm two-layer PCB layout for an IR-reflective object detector: an IR LED illuminates the target, a photodiode picks up the reflection, and a comparator against a potentiometer-set threshold drives an indicator LED. Hand-soldered the through-hole board and verified that the LED turns on when an object approaches.</div>
+        <div class="entry-tags">PCB Design · Schematic Capture · IR Sensing · Soldering</div>
+        <div class="entry-links"><a href="pcb-schematic.png" target="_blank" rel="noopener">Schematic</a><a href="pcb-layout.png" target="_blank" rel="noopener">PCB Layout</a></div>
       </div>
     </article>
 
