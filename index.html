@@ -75,6 +75,10 @@
     display:flex; align-items:center; justify-content:center; text-align:center; padding:10px;
     font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--text-soft); line-height:1.4;
   }
+  .entry-media.fit{ background:#fff; padding:4px; }
+  .entry-media.fit img{ object-fit:contain; object-position:center; }
+  .entry-media.short{ aspect-ratio:9/16; background:#000; }
+  .entry-media.short iframe{ width:100%; height:100%; border:0; display:block; }
   .entry-year{ font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--text-soft); margin-bottom:6px; }
   .entry-title{ font-size:16px; font-weight:500; line-height:1.4; }
   .entry-sub{ margin-top:4px; font-size:14px; color:var(--text-soft); }
@@ -105,6 +109,7 @@
     .avatar{ width:96px; height:96px; }
     .entry, .tl-item{ grid-template-columns:1fr; gap:10px; }
     .entry-media{ width:100%; aspect-ratio:16/9; }
+    .entry-media.short{ width:min(240px, 70%); aspect-ratio:9/16; }
     nav ul{ gap:12px; font-size:13px; }
   }
   :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
@@ -167,46 +172,50 @@
     </article>
 
     <article class="entry">
-      <div class="entry-media mono">PSpice<br>38.63 dB<br>120.6 MHz</div>
+      <a class="entry-media fit" href="fda-schematic.png" target="_blank" rel="noopener"><img src="fda-schematic.png" alt="PSpice schematic of the two-stage fully differential amplifier with transformer-coupled input and output"></a>
       <div>
         <div class="entry-year">2026</div>
         <div class="entry-title">Wideband Fully Differential Amplifier</div>
         <div class="entry-sub">Course project</div>
         <div class="entry-desc">Designed a two-stage fully differential amplifier under fixed constraints (5 V single supply, one ideal voltage and one ideal current source, 300 Ω input, 1 pF load). Applied a regulated cascode to the tail current source and used the input/output transformer turns ratios as design variables, reaching 38.63 dB gain, 120.6 MHz bandwidth, and 247.92 dB CMRR at 14.6 mW.</div>
         <div class="entry-tags">Analog Circuit Design · PSpice</div>
+        <div class="entry-links"><a href="fda-schematic.png" target="_blank" rel="noopener">Schematic</a></div>
       </div>
     </article>
 
     <article class="entry">
-      <div class="entry-media mono">Arduino Nano<br>IR sensors<br>PD control</div>
+      <div class="entry-media short"><iframe src="https://www.youtube.com/embed/MGwuP7U-tMU" title="Line-tracing robot demo" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       <div>
         <div class="entry-year">2026</div>
         <div class="entry-title">Line-Tracing Robot</div>
         <div class="entry-sub">Course project</div>
         <div class="entry-desc">Built an IR-sensor line-following robot on an Arduino Nano with a TB6612FNG motor driver, and tuned a PD controller for stable line tracking.</div>
         <div class="entry-tags">Arduino · Motor Control · PD Control</div>
+        <div class="entry-links"><a href="https://youtube.com/shorts/MGwuP7U-tMU" target="_blank" rel="noopener">Video</a></div>
       </div>
     </article>
 
     <article class="entry">
-      <div class="entry-media mono">20 HP · 250 V<br>600 rpm<br>DC drive</div>
+      <a class="entry-media fit" href="dc-motor-startup.png" target="_blank" rel="noopener"><img src="dc-motor-startup.png" alt="Simulated 0 to 400 rpm startup of the DC motor drive: speed, armature current, torque, and terminal voltage"></a>
       <div>
         <div class="entry-year">2026</div>
         <div class="entry-title">Closed-Loop Variable-Speed DC Motor Drive Simulation</div>
         <div class="entry-sub">Course project</div>
         <div class="entry-desc">Simulated the dynamic performance of a closed-loop variable-speed drive for a 20 HP, 250 V, 600 rpm, 8-pole separately excited DC motor under a fan-type load.</div>
         <div class="entry-tags">Power Electronics · Drive Simulation</div>
+        <div class="entry-links"><a href="dc-motor-startup.png" target="_blank" rel="noopener">Startup Plots</a></div>
       </div>
     </article>
 
     <article class="entry">
-      <div class="entry-media mono">3 bands<br>5 MOSFETs<br>0.66 dB flat</div>
+      <a class="entry-media fit" href="equalizer-schematic.png" target="_blank" rel="noopener"><img src="equalizer-schematic.png" alt="PSpice schematic of the three-band audio equalizer with three MOSFET gain branches and an output buffer"></a>
       <div>
         <div class="entry-year">2025</div>
         <div class="entry-title">Three-Band Audio Equalizer</div>
         <div class="entry-sub">Course project</div>
         <div class="entry-desc">Designed a three-stage equalizer with independent gain control per band under a five-MOSFET constraint, reaching 24.27–24.93 dB in-band gain over the required 100 kHz bandwidth and holding in-band flatness to 0.66 dB against a 1 dB requirement.</div>
         <div class="entry-tags">Analog Circuit Design · MOSFET</div>
+        <div class="entry-links"><a href="equalizer-schematic.png" target="_blank" rel="noopener">Schematic</a></div>
       </div>
     </article>
   </section>
